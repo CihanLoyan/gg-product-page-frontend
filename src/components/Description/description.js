@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Description(props) {
+export default function Description({content}) {
     return (
         <div className="desc">
-            <p>{props.content}</p>
+            <p>{content}</p>
         </div>
     )
 }

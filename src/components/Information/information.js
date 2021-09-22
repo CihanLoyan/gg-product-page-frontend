@@ -4,12 +4,12 @@ import Description from '../Description/description'
 import Price from '../Price/price'
 import Title from '../Title/title'
 
-export default function Information( {product} ) {  // DESTRUCTURING
+export default function Information( {title, price, description} ) {  // DESTRUCTURING
     return (
-        <div className="Info">
-            <Title title={product.title}/>
-            <Price title={product.price} />
-            <Description content={product.description} />
+        <div className="info">
+            <Title title={title}/>
+            <Price title={price} />
+            <Description content={description} />
             <AddToCard span="Sepete Ekle" />
         </div>
     )
