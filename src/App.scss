@@ -1,0 +1,129 @@
+$titleFont: 'Roboto', sans-serif;
+
+$colors: (                      // map-get metodu oluşturuldu.
+    "colorWhite": #ffff, 
+    "lightGrey": #dcdcdc, 
+    "colorBlue": blue
+);
+
+@mixin button($color, $back) {
+    color: $color;
+    background-color: $back;
+}
+
+@mixin size($w, $h) {
+    width: $w;
+    height: $h;
+}
+
+@mixin border($width, $style, $color) {    // mixin oluşturuldu.
+    border-width: $width;
+    border-style: $style;
+    border-color: $color;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    background-color: lightgrey;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        background-color: white;
+        width: 980px;
+        height: 100vh;
+        margin: auto;
+        margin-right: auto;
+        margin-left: auto;
+        box-shadow: 0 1px 2px 0;
+        @media(max-width: 980px){
+            height: 100%;
+        }
+        .gallery{
+            width: 50%;
+            margin: 30px;
+            .big-image{
+                width: 45vh;
+                @include border(1px, solid, lightgray);
+                .big-img{
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            .thumbnail-wrapper{
+                display: inline-flex;
+                border-left: 1px solid lightgrey;
+                ul{
+                    li{
+                        border-right: 1px solid lightgrey;
+                        border-bottom: 1px solid lightgrey;
+                        border-top: none;
+                        .small-img{
+                            height: 15vh;        
+                        }
+
+                    }
+                }
+            }
+        }
+        .info{
+            margin-right: 30px;
+            font-family: $titleFont;
+            width: 100%;
+            height: 80vh;
+            margin-top: 30px;
+            float: right;
+            .title{
+                margin-top: 10px;
+                margin-bottom: 180px;
+                .header{
+                    font-size: 25px;
+                    font-weight: 500;
+                }
+            }
+            .price{
+                margin-bottom: 118px;
+                span{
+                    font-size: 40px;
+                    font-weight: 600;
+                }
+            }
+            .desc{
+                margin-bottom: 70px;
+                padding: 5%;
+                background-color: whitesmoke;
+                border-radius: 5px;
+                p{
+                    font-size: 18px;
+                    text-align: center;
+                    display: block;
+                
+                }
+            }
+            .add{
+                float: right;
+                form{
+                    button{
+                        font-size: 17px;
+                        text-align: center;
+                        @include size(15em, 2.5em);
+                        @include button(map-get($colors, "colorBlue"), map-get($colors, "colorWhite"));
+                        border: 0.01rem solid lightgray;
+                        border-radius: 8px;
+                        &:hover{
+                            @include button(map-get($colors, "colorWhite"), map-get($colors, "colorBlue"));
+                            /*color: map-get($colors, "colorWhite");
+                            background-color: map-get($colors, "colorBlue");*/
+                            transition: 0.3s ease;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

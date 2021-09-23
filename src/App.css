@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  background-color: lightgrey;
+}
+
+body .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: white;
+  width: 980px;
+  height: 100vh;
+  margin: auto;
+  margin-right: auto;
+  margin-left: auto;
+  -webkit-box-shadow: 0 1px 2px 0;
+          box-shadow: 0 1px 2px 0;
+}
+
+@media (max-width: 980px) {
+  body .container {
+    height: 100%;
+  }
+}
+
+body .container .gallery {
+  width: 50%;
+  margin: 30px;
+}
+
+body .container .gallery .big-image {
+  width: 45vh;
+  border-width: 1px;
+  border-style: solid;
+  border-color: lightgray;
+}
+
+body .container .gallery .big-image .big-img {
+  width: 100%;
+  height: auto;
+}
+
+body .container .gallery .thumbnail-wrapper {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-left: 1px solid lightgrey;
+}
+
+body .container .gallery .thumbnail-wrapper ul li {
+  border-right: 1px solid lightgrey;
+  border-bottom: 1px solid lightgrey;
+  border-top: none;
+}
+
+body .container .gallery .thumbnail-wrapper ul li .small-img {
+  height: 15vh;
+}
+
+body .container .info {
+  margin-right: 30px;
+  font-family: "Roboto", sans-serif;
+  width: 100%;
+  height: 80vh;
+  margin-top: 30px;
+  float: right;
+}
+
+body .container .info .title {
+  margin-top: 10px;
+  margin-bottom: 180px;
+}
+
+body .container .info .title .header {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+body .container .info .price {
+  margin-bottom: 118px;
+}
+
+body .container .info .price span {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+body .container .info .desc {
+  margin-bottom: 70px;
+  padding: 5%;
+  background-color: whitesmoke;
+  border-radius: 5px;
+}
+
+body .container .info .desc p {
+  font-size: 18px;
+  text-align: center;
+  display: block;
+}
+
+body .container .info .add {
+  float: right;
+}
+
+body .container .info .add form button {
+  font-size: 17px;
+  text-align: center;
+  width: 15em;
+  height: 2.5em;
+  color: blue;
+  background-color: #ffff;
+  border: 0.01rem solid lightgray;
+  border-radius: 8px;
+}
+
+body .container .info .add form button:hover {
+  color: #ffff;
+  background-color: blue;
+  /*color: map-get($colors, "colorWhite");
+                            background-color: map-get($colors, "colorBlue");*/
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+/*# sourceMappingURL=App.css.map */
