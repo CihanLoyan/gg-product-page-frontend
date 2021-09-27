@@ -49,7 +49,8 @@ body .container .gallery {
 }
 
 body .container .gallery .big-image {
-  width: 45vh;
+  width: 375px;
+  height: 500px;
   border-width: 1px;
   border-style: solid;
   border-color: lightgray;
@@ -75,7 +76,10 @@ body .container .gallery .big-image {
 }
 
 body .container .gallery .big-image .big-img {
+  -o-object-fit: contain;
+     object-fit: contain;
   width: 100%;
+  height: 100%;
   cursor: pointer;
 }
 
@@ -88,15 +92,6 @@ body .container .gallery .big-image .big-img {
 
 body .container .gallery .thumbnail-wrapper {
   border-left: 1px solid lightgrey;
-}
-
-@media (max-width: 767px) {
-  body .container .gallery .thumbnail-wrapper {
-    display: none;
-  }
-}
-
-body .container .gallery .thumbnail-wrapper ul {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -105,15 +100,24 @@ body .container .gallery .thumbnail-wrapper ul {
           justify-content: flex-start;
 }
 
-body .container .gallery .thumbnail-wrapper ul li {
+@media (max-width: 767px) {
+  body .container .gallery .thumbnail-wrapper {
+    display: none;
+  }
+}
+
+body .container .gallery .thumbnail-wrapper li {
   border-right: 1px solid lightgrey;
   border-bottom: 1px solid lightgrey;
   border-top: none;
 }
 
-body .container .gallery .thumbnail-wrapper ul li .small-img {
+body .container .gallery .thumbnail-wrapper li .small-img {
   cursor: pointer;
-  height: 15vh;
+  height: 120px;
+  width: 90px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 body .container .info {

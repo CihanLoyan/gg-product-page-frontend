@@ -1,16 +1,21 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 export default function Gallery({images}) {
+    const [activeImageIndex, setActiveImageIndex] = useState(0);
+    const handleClick = (e, index) => {
+        console.log("thumbnail-clicked", index)
+        setActiveImageIndex(index)
+    }
     return (
         <div className="gallery">
             <div className="big-image">
-                <img src={`./${images[0]}`} className="big-img" />
+                <img src={`./${images[activeImageIndex]}`} className="big-img" />
             </div>
-            <div className="thumbnail-wrapper">
-                {images.map((image) => {
-                    return <ul><li><img src={`./${image}`} className="small-img" /></li></ul>       
+            <ul className="thumbnail-wrapper">
+                {images.map((image, index) => {
+                    return <li onClick={(e) => handleClick(e, index)}><img src={`./${image}`} className="small-img" /></li>      
                 })}
-            </div>
+            </ul>
         </div>
     )
 }

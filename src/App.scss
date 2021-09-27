@@ -59,7 +59,8 @@ body{
             display: block;
            
             .big-image{
-                width: 45vh;
+                width: 375px;
+                height: 500px;    
                 @include border(1px, solid, lightgray);
                 @media(max-width:767px){
                     border: none;
@@ -71,7 +72,9 @@ body{
                     justify-content: center;
                 }
                 .big-img{ 
+                    object-fit: contain;            
                     width: 100%;
+                    height: 100%;
                     cursor: pointer;
                     @media(max-width:979px){
                         width: 200px;
@@ -81,22 +84,22 @@ body{
             }
             .thumbnail-wrapper{
                 border-left: 1px solid lightgrey;
+                display: inline-flex;
+                justify-content: flex-start;
                 @media(max-width:767px){
                     display: none;
                 }
-                ul{
-                    display: inline-flex;
-                    justify-content: flex-start;
-                    li{
-                        border-right: 1px solid lightgrey;
-                        border-bottom: 1px solid lightgrey;
-                        border-top: none;
-                        .small-img{
-                            cursor: pointer; 
-                            height: 15vh;
-                        }
+                li{
+                    border-right: 1px solid lightgrey;
+                    border-bottom: 1px solid lightgrey;
+                    border-top: none;
+                    .small-img{
+                        cursor: pointer; 
+                        height: 120px;
+                        width: 90px;
+                        object-fit: cover;
                     }
-                }
+                }    
             }
         }
         .info{
