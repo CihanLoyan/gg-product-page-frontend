@@ -41,29 +41,29 @@ body .container {
   }
 }
 
-body .container .gallery {
+.gallery {
   position: relative;
   margin: 35px;
   margin-top: 5px;
   display: block;
 }
 
-body .container .gallery .big-image {
+.gallery .big-image {
   width: 375px;
-  height: 500px;
+  height: 540px;
   border-width: 1px;
   border-style: solid;
   border-color: lightgray;
 }
 
 @media (max-width: 767px) {
-  body .container .gallery .big-image {
+  .gallery .big-image {
     border: none;
   }
 }
 
 @media (max-width: 979px) {
-  body .container .gallery .big-image {
+  .gallery .big-image {
     width: 100%;
     height: 302px;
     display: -webkit-box;
@@ -75,7 +75,7 @@ body .container .gallery .big-image {
   }
 }
 
-body .container .gallery .big-image .big-img {
+.gallery .big-image .big-img {
   -o-object-fit: contain;
      object-fit: contain;
   width: 100%;
@@ -84,13 +84,13 @@ body .container .gallery .big-image .big-img {
 }
 
 @media (max-width: 979px) {
-  body .container .gallery .big-image .big-img {
+  .gallery .big-image .big-img {
     width: 200px;
     height: 300px;
   }
 }
 
-body .container .gallery .thumbnail-wrapper {
+.gallery .thumbnail-wrapper {
   border-left: 1px solid lightgrey;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -101,81 +101,81 @@ body .container .gallery .thumbnail-wrapper {
 }
 
 @media (max-width: 767px) {
-  body .container .gallery .thumbnail-wrapper {
+  .gallery .thumbnail-wrapper {
     display: none;
   }
 }
 
-body .container .gallery .thumbnail-wrapper li {
+.gallery .thumbnail-wrapper li {
   border-right: 1px solid lightgrey;
   border-bottom: 1px solid lightgrey;
   border-top: none;
 }
 
-body .container .gallery .thumbnail-wrapper li .small-img {
+.gallery .thumbnail-wrapper li .small-img {
   cursor: pointer;
   height: 120px;
   width: 90px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
-body .container .info {
+.info {
   height: 80vh;
   display: block;
 }
 
 @media (max-width: 767px) {
-  body .container .info {
+  .info {
     width: 100%;
   }
 }
 
-body .container .info .title {
+.info .title {
   margin-top: 1vh;
   margin-right: 35px;
   margin-bottom: 20vh;
 }
 
 @media (max-width: 979px) {
-  body .container .info .title {
+  .info .title {
     margin-top: 5vh;
     margin-left: 4vh;
     margin-bottom: 6vh;
   }
 }
 
-body .container .info .title .header {
+.info .title .header {
   font-size: 22px;
   font-weight: 600;
   font-family: "Roboto", sans-serif;
 }
 
 @media (max-width: 979px) {
-  body .container .info .title .header {
+  .info .title .header {
     font-size: 18px;
   }
 }
 
-body .container .info .price {
+.info .price {
   margin-right: 35px;
   margin-bottom: 19vh;
 }
 
 @media (max-width: 979px) {
-  body .container .info .price {
+  .info .price {
     margin-left: 4vh;
     margin-bottom: 6vh;
   }
 }
 
-body .container .info .price span {
+.info .price span {
   font-size: 35px;
   font-weight: 700;
   font-family: "Roboto", sans-serif;
 }
 
-body .container .info .desc {
+.info .desc {
   width: 95%;
   padding: 5%;
   margin-bottom: 7vh;
@@ -184,7 +184,7 @@ body .container .info .desc {
 }
 
 @media (max-width: 979px) {
-  body .container .info .desc {
+  .info .desc {
     width: auto;
     margin-left: 30px;
     margin-right: 35px;
@@ -193,31 +193,31 @@ body .container .info .desc {
   }
 }
 
-body .container .info .desc p {
+.info .desc p {
   font-size: 1.15em;
   text-align: center;
 }
 
-body .container .info .add {
+.add {
   float: right;
   margin-right: 3.5vh;
 }
 
 @media (max-width: 979px) {
-  body .container .info .add {
+  .add {
     margin-right: 6vh;
   }
 }
 
 @media (max-width: 767px) {
-  body .container .info .add {
+  .add {
     float: none;
     width: 100%;
   }
 }
 
 @media (max-width: 767px) {
-  body .container .info .add form {
+  .add form {
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -228,7 +228,7 @@ body .container .info .add {
   }
 }
 
-body .container .info .add form button {
+.add form button {
   font-size: 17px;
   width: 15em;
   height: 2.5em;
@@ -238,12 +238,12 @@ body .container .info .add form button {
   border-radius: 8px;
 }
 
-body .container .info .add form button:hover {
+.add form button:hover {
   cursor: pointer;
   color: #ffff;
   background-color: blue;
   /*color: map-get($colors, "colorWhite");
-                            background-color: map-get($colors, "colorBlue");*/
+                background-color: map-get($colors, "colorBlue");*/
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
@@ -252,13 +252,40 @@ body .container .info .add form button:hover {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  border: 1px solid black;
-  background-color: blanchedalmond;
+  border: px solid;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
-  text-align: center;
   width: 200px;
   height: 40px;
+  -webkit-transition: 0.5s ease-in;
+  transition: 0.5s ease-in;
   line-height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.alert-box:before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: whitesmoke;
+  position: absolute;
+  z-index: -1;
+  opacity: .5;
+}
+
+.alert-box i {
+  font-size: 30px;
+  color: limegreen;
+  margin-left: 10px;
+  line-height: 35px;
+}
+
+.alert-box.hidden {
+  opacity: 0;
 }
 /*# sourceMappingURL=App.css.map */

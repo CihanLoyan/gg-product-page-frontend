@@ -14,13 +14,14 @@ export default function Information( {title, price, description} ) {  // DESTRUC
             setIsAddedToCart(false)
         }, 2000);
     }
+    const icon = <i class="fas fa-check"></i>
     return (
         <div className="info">
             <Title title={title}/>
             <Price title={price} />
             <Description content={description} />
             <AddToCard span="Sepete Ekle" onClick={handleAddToCart} />
-            {isAddedToCart && <AlertBox text="Sepete Eklendi" />}
+            <AlertBox isVisible={isAddedToCart} text="Sepete Eklendi" icon={icon} />
         </div>
     )
 }
