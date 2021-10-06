@@ -17,5 +17,6 @@ export default function Gallery({images}) {
                 })}
             </ul>
         </div>
+        
     )
 }

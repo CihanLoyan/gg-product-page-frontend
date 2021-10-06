@@ -17,7 +17,7 @@ export default function Information( {title, price, description} ) {  // DESTRUC
     const icon = <i class="fas fa-check"></i>
     return (
         <div className="info">
-            <Title title={title}/>
+            <Title title={title} />
             <Price title={price} />
             <Description content={description} />
             <AddToCard span="Sepete Ekle" onClick={handleAddToCart} />
