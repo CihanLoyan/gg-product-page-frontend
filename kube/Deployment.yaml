@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: product-page
+  name: product-page
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: product-page
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: product-page
+    spec:
+      containers:
+      - image: cihanloyan/product-page
+        name: product-page
+        resources: {}
+status: {}
