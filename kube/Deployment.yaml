@@ -18,7 +18,7 @@ spec:
         app: product-page
     spec:
       containers:
-      - image: cihanloyan/product-page
+      - image: cihanloyan/product-detail-page
         name: product-page
         resources: {}
 status: {}
